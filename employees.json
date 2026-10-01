@@ -1,0 +1,52 @@
+[
+  {
+    "emp_id": "NA1001",
+    "name": "Aarav Sharma",
+    "department": "Engineering",
+    "manager": "Neha Kapoor",
+    "type": "Full-time",
+    "joined": "2022-03-14",
+    "pin": "4821",
+    "leave_balance": {"CL": 5, "SL": 7, "EL": 21}
+  },
+  {
+    "emp_id": "NA1002",
+    "name": "Priya Nair",
+    "department": "Marketing",
+    "manager": "Rohan Mehta",
+    "type": "Full-time",
+    "joined": "2024-11-04",
+    "pin": "1957",
+    "leave_balance": {"CL": 8, "SL": 10, "EL": 6}
+  },
+  {
+    "emp_id": "NA1003",
+    "name": "Karan Verma",
+    "department": "Finance",
+    "manager": "Sunita Rao",
+    "type": "Contract",
+    "joined": "2025-06-01",
+    "pin": "3340",
+    "leave_balance": {"CL": 4, "SL": 6, "EL": 0}
+  },
+  {
+    "emp_id": "NA1004",
+    "name": "Ishita Bose",
+    "department": "Engineering",
+    "manager": "Neha Kapoor",
+    "type": "Full-time",
+    "joined": "2026-07-15",
+    "pin": "7702",
+    "leave_balance": {"CL": 8, "SL": 10, "EL": 3}
+  },
+  {
+    "emp_id": "NA1005",
+    "name": "Rahul Desai",
+    "department": "Sales",
+    "manager": "Vikram Singh",
+    "type": "Full-time",
+    "joined": "2019-01-21",
+    "pin": "5563",
+    "leave_balance": {"CL": 2, "SL": 9, "EL": 30}
+  }
+]
