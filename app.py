@@ -296,6 +296,10 @@ with st.sidebar:
     with st.expander("About this demo"):
         st.caption(f"Model: {MODEL}\n\nKnowledge: handbook injected into context (~{len(HANDBOOK) // 4} tokens). "
                    "Fictional company data.")
+        st.caption(f"API key loaded: {'yes (length ' + str(len(API_KEY)) + ')' if API_KEY else 'NO'}")
+        if st.session_state.get("last_error"):
+            st.caption("Last AI error:")
+            st.code(st.session_state.last_error, language=None)
 
 # ----- header -----
 st.markdown(
@@ -363,7 +367,8 @@ if prompt:
                         reply += (f"\n\n🎫 I've raised ticket **{tid}** for the HR team. "
                                   f"Ask me \"status of {tid}\" any time.")
                     sources = extract_sources(reply)
-                except Exception:
+                except Exception as err:
+                    st.session_state.last_error = re.sub(r"AIza[\w-]+", "[key hidden]", str(err))[:500]
                     tid = new_ticket(f"Unanswered (AI unavailable): {prompt}")
                     reply = ("Sorry, I'm having trouble reaching my AI service right now. "
                              f"I've raised ticket **{tid}** so HR can follow up, "
